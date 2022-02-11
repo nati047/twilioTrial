@@ -5,7 +5,7 @@ const app = express();
 
 app.post('/sms' , (req, res) =>{
   const twiml = new MessagingResponse();
-  console.log('message recieved',req)
+  
   twiml.message('Thanks for your pointless text');
   res.writeHead(200, {'content-type': 'text/xml'});
   res.end(twiml.toString());
