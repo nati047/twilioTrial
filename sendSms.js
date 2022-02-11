@@ -1,15 +1,15 @@
-const accountSid = 'ACf200703aa2fd43f4ecf5f4178b2cb3a2';
-const authToken = '3b038fa02ce2ecbb83816339c3df3f4c';
+const accountSid = 'AC3820cf994d279c07165aff03e4e6eee4';
+const authToken = '1d06a71c4fe717080cc94c965b49cd25';
 
 const client = require('twilio')(accountSid, authToken);
 
 client.messages.create({
   to: '+16479049791',
-  from: '+14377478266',
+  from: '+14372918370',
   body: 'well i dont know what to say so...'
 })
 .then((msg) =>{
-  console.log(msg);
+  console.log('sucess', msg);
 }).catch(err => {
-  console.log(err);
+  console.log('error',err);
 })
